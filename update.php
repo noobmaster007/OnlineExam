@@ -2,18 +2,12 @@
 include_once 'dbConnection.php';
 session_start();
 $email=$_SESSION['email'];
-//delete feedback
-if(isset($_SESSION['key'])){
-if(@$_GET['fdid'] && $_SESSION['key']=='sunny7785068889') {
-$id=@$_GET['fdid'];
-$result = mysqli_query($con,"DELETE FROM feedback WHERE id='$id' ") or die('Error');
-header("location:dash.php?q=3");
-}
-}
+
+
 
 //delete user
 if(isset($_SESSION['key'])){
-if(@$_GET['demail'] && $_SESSION['key']=='sunny7785068889') {
+if(@$_GET['demail'] && $_SESSION['key']=='pratip') {
 $demail=@$_GET['demail'];
 $r1 = mysqli_query($con,"DELETE FROM rank WHERE email='$demail' ") or die('Error');
 $r2 = mysqli_query($con,"DELETE FROM history WHERE email='$demail' ") or die('Error');
@@ -23,7 +17,7 @@ header("location:dash.php?q=1");
 }
 //remove quiz
 if(isset($_SESSION['key'])){
-if(@$_GET['q']== 'rmquiz' && $_SESSION['key']=='sunny7785068889') {
+if(@$_GET['q']== 'rmquiz' && $_SESSION['key']=='pratip') {
 $eid=@$_GET['eid'];
 $result = mysqli_query($con,"SELECT * FROM questions WHERE eid='$eid' ") or die('Error');
 while($row = mysqli_fetch_array($result)) {
@@ -32,7 +26,7 @@ $r1 = mysqli_query($con,"DELETE FROM options WHERE qid='$qid'") or die('Error');
 $r2 = mysqli_query($con,"DELETE FROM answer WHERE qid='$qid' ") or die('Error');
 }
 $r3 = mysqli_query($con,"DELETE FROM questions WHERE eid='$eid' ") or die('Error');
-$r4 = mysqli_query($con,"DELETE FROM quiz WHERE eid='$eid' ") or die('Error');
+$r4 = mysqli_query($con,"DELETE FROM exam WHERE eid='$eid' ") or die('Error');
 $r4 = mysqli_query($con,"DELETE FROM history WHERE eid='$eid' ") or die('Error');
 
 header("location:dash.php?q=5");
@@ -41,17 +35,17 @@ header("location:dash.php?q=5");
 
 //add quiz
 if(isset($_SESSION['key'])){
-if(@$_GET['q']== 'addquiz' && $_SESSION['key']=='sunny7785068889') {
+if(@$_GET['q']== 'addquiz' && $_SESSION['key']=='pratip') {
 $name = $_POST['name'];
 $name= ucwords(strtolower($name));
 $total = $_POST['total'];
-$sahi = $_POST['right'];
+$right = $_POST['right'];
 $wrong = $_POST['wrong'];
 $time = $_POST['time'];
 $tag = $_POST['tag'];
 $desc = $_POST['desc'];
 $id=uniqid();
-$q3=mysqli_query($con,"INSERT INTO quiz VALUES  ('$id','$name' , '$sahi' , '$wrong','$total','$time' ,'$desc','$tag', NOW())");
+$q3=mysqli_query($con,"INSERT INTO exam VALUES  ('$id','$name' , '$right' , '$wrong','$total','$time' ,'$desc','$tag', NOW())");
 
 header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
@@ -59,7 +53,7 @@ header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 
 //add question
 if(isset($_SESSION['key'])){
-if(@$_GET['q']== 'addqns' && $_SESSION['key']=='sunny7785068889') {
+if(@$_GET['q']== 'addqns' && $_SESSION['key']=='pratip') {
 $n=@$_GET['n'];
 $eid=@$_GET['eid'];
 $ch=@$_GET['ch'];
@@ -122,10 +116,10 @@ $ansid=$row['ansid'];
 }
 if($ans == $ansid)
 {
-$q=mysqli_query($con,"SELECT * FROM quiz WHERE eid='$eid' " );
+$q=mysqli_query($con,"SELECT * FROM exam WHERE eid='$eid' " );
 while($row=mysqli_fetch_array($q) )
 {
-$sahi=$row['sahi'];
+$right=$row['right'];
 }
 if($sn == 1)
 {
@@ -136,16 +130,16 @@ $q=mysqli_query($con,"SELECT * FROM history WHERE eid='$eid' AND email='$email' 
 while($row=mysqli_fetch_array($q) )
 {
 $s=$row['score'];
-$r=$row['sahi'];
+$r=$row['right'];
 }
 $r++;
-$s=$s+$sahi;
-$q=mysqli_query($con,"UPDATE `history` SET `score`=$s,`level`=$sn,`sahi`=$r, date= NOW()  WHERE  email = '$email' AND eid = '$eid'")or die('Error124');
+$s=$s+$right;
+$q=mysqli_query($con,"UPDATE `history` SET `score`=$s,`level`=$sn,`right`=$r, date= NOW()  WHERE  email = '$email' AND eid = '$eid'")or die('Error124');
 
 } 
 else
 {
-$q=mysqli_query($con,"SELECT * FROM quiz WHERE eid='$eid' " )or die('Error129');
+$q=mysqli_query($con,"SELECT * FROM exam WHERE eid='$eid' " )or die('Error129');
 
 while($row=mysqli_fetch_array($q) )
 {
@@ -170,7 +164,7 @@ if($sn != $total)
 $sn++;
 header("location:account.php?q=quiz&step=2&eid=$eid&n=$sn&t=$total")or die('Error152');
 }
-else if( $_SESSION['key']!='sunny7785068889')
+else if( $_SESSION['key']!='pratip')
 {
 $q=mysqli_query($con,"SELECT score FROM history WHERE eid='$eid' AND email='$email'" )or die('Error156');
 while($row=mysqli_fetch_array($q) )

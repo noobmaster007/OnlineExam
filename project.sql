@@ -37,8 +37,9 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `email`, `password`) VALUES
-(1, 'sunnygkp10@gmail.com', '123456'),
-(2, 'admin@admin.com', 'admin');
+(1, 'gablusarkar91@gmail.com', 'admin'),
+(2, 'pranaykarmakar9@gmail.com', 'admin'),
+(3, 'admin@admin.com', 'admin');
 
 -- --------------------------------------------------------
 
@@ -80,27 +81,13 @@ INSERT INTO `answer` (`qid`, `ansid`) VALUES
 -- Table structure for table `feedback`
 --
 
-CREATE TABLE `feedback` (
-  `id` text NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `subject` varchar(500) NOT NULL,
-  `feedback` varchar(500) NOT NULL,
-  `date` date NOT NULL,
-  `time` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 --
 -- Dumping data for table `feedback`
 --
 
-INSERT INTO `feedback` (`id`, `name`, `email`, `subject`, `feedback`, `date`, `time`) VALUES
-('55846be776610', 'testing', 'sunnygkp10@gmail.com', 'testing', 'testing stART', '2015-06-19', '09:22:15pm'),
-('5584ddd0da0ab', 'netcamp', 'sunnygkp10@gmail.com', 'feedback', ';mLBLB', '2015-06-20', '05:28:16am'),
-('558510a8a1234', 'sunnygkp10', 'sunnygkp10@gmail.com', 'dl;dsnklfn', 'fmdsfld fdj', '2015-06-20', '09:05:12am'),
-('5585509097ae2', 'sunny', 'sunnygkp10@gmail.com', 'kcsncsk', 'l.mdsavn', '2015-06-20', '01:37:52pm'),
-('5586ee27af2c9', 'vikas', 'vikas@gmail.com', 'trial feedback', 'triaal feedbak', '2015-06-21', '07:02:31pm'),
-('5589858b6c43b', 'nik', 'nik1@gmail.com', 'good', 'good site', '2015-06-23', '06:12:59pm');
+
 
 -- --------------------------------------------------------
 
@@ -113,7 +100,7 @@ CREATE TABLE `history` (
   `eid` text NOT NULL,
   `score` int(11) NOT NULL,
   `level` int(11) NOT NULL,
-  `sahi` int(11) NOT NULL,
+  `right` int(11) NOT NULL,
   `wrong` int(11) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -122,7 +109,7 @@ CREATE TABLE `history` (
 -- Dumping data for table `history`
 --
 
-INSERT INTO `history` (`email`, `eid`, `score`, `level`, `sahi`, `wrong`, `date`) VALUES
+INSERT INTO `history` (`email`, `eid`, `score`, `level`, `right`, `wrong`, `date`) VALUES
 ('sunnygkp10@gmail.com', '558921841f1ec', 4, 2, 2, 0, '2015-06-23 09:31:26'),
 ('sunnygkp10@gmail.com', '558920ff906b8', 4, 2, 2, 0, '2015-06-23 13:32:09'),
 ('avantika420@gmail.com', '558921841f1ec', 4, 2, 2, 0, '2015-06-23 14:33:04'),
@@ -266,7 +253,7 @@ INSERT INTO `questions` (`eid`, `qid`, `qns`, `choice`, `sn`) VALUES
 CREATE TABLE `quiz` (
   `eid` text NOT NULL,
   `title` varchar(100) NOT NULL,
-  `sahi` int(11) NOT NULL,
+  `right` int(11) NOT NULL,
   `wrong` int(11) NOT NULL,
   `total` int(11) NOT NULL,
   `time` bigint(20) NOT NULL,
@@ -279,7 +266,7 @@ CREATE TABLE `quiz` (
 -- Dumping data for table `quiz`
 --
 
-INSERT INTO `quiz` (`eid`, `title`, `sahi`, `wrong`, `total`, `time`, `intro`, `tag`, `date`) VALUES
+INSERT INTO `quiz` (`eid`, `title`, `right`, `wrong`, `total`, `time`, `intro`, `tag`, `date`) VALUES
 ('558920ff906b8', 'Linux : File Managment', 2, 1, 2, 5, '', 'linux', '2015-06-23 09:03:59'),
 ('558921841f1ec', 'Php Coding', 2, 1, 2, 5, '', 'PHP', '2015-06-23 09:06:12'),
 ('5589222f16b93', 'C++ Coding', 2, 1, 2, 5, '', 'c++', '2015-06-23 09:09:03'),
@@ -328,16 +315,6 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`name`, `gender`, `college`, `email`, `mob`, `password`) VALUES
-('Avantika', 'F', 'KNIT sultanpur', 'avantika420@gmail.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e'),
-('Mark Zukarburg', 'M', 'Stanford', 'ceo@facebook.com', 987654321, 'e10adc3949ba59abbe56e057f20f883e'),
-('Komal', 'F', 'KNIT sultanpur', 'komalpd2011@gmail.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e'),
-('Tom Cruze', 'M', 'Hollywood', 'mi5@hollywood.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e'),
-('Netcamp', 'M', 'KNIT sultanpur', 'netcamp@gmail.com', 987654321, 'e10adc3949ba59abbe56e057f20f883e'),
-('Nikunj', 'M', 'XYZ', 'nik1@gmail.com', 987, '202cb962ac59075b964b07152d234b70'),
-('Sunny', 'M', 'KNIT sultanpur', 'sunnygkp10@gmail.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e'),
-('User', 'M', 'cimt', 'user@user.com', 11, 'e10adc3949ba59abbe56e057f20f883e'),
-('Vikash', 'M', 'KNIT sultanpur@gmail.com', 'vikash@gmail.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e');
 
 --
 -- Indexes for dumped tables
