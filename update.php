@@ -32,7 +32,7 @@ $r1 = mysqli_query($con,"DELETE FROM options WHERE qid='$qid'") or die('Error');
 $r2 = mysqli_query($con,"DELETE FROM answer WHERE qid='$qid' ") or die('Error');
 }
 $r3 = mysqli_query($con,"DELETE FROM questions WHERE eid='$eid' ") or die('Error');
-$r4 = mysqli_query($con,"DELETE FROM quiz WHERE eid='$eid' ") or die('Error');
+$r4 = mysqli_query($con,"DELETE FROM exam WHERE eid='$eid' ") or die('Error');
 $r4 = mysqli_query($con,"DELETE FROM history WHERE eid='$eid' ") or die('Error');
 
 header("location:dash.php?q=5");
@@ -51,7 +51,7 @@ $time = $_POST['time'];
 $tag = $_POST['tag'];
 $desc = $_POST['desc'];
 $id=uniqid();
-$q3=mysqli_query($con,"INSERT INTO quiz VALUES  ('$id','$name' , '$right' , '$wrong','$total','$time' ,'$desc','$tag', NOW())");
+$q3=mysqli_query($con,"INSERT INTO exam VALUES  ('$id','$name' , '$right' , '$wrong','$total','$time' ,'$desc','$tag', NOW())");
 
 header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
@@ -122,7 +122,7 @@ $ansid=$row['ansid'];
 }
 if($ans == $ansid)
 {
-$q=mysqli_query($con,"SELECT * FROM quiz WHERE eid='$eid' " );
+$q=mysqli_query($con,"SELECT * FROM exam WHERE eid='$eid' " );
 while($row=mysqli_fetch_array($q) )
 {
 $right=$row['right'];
@@ -145,7 +145,7 @@ $q=mysqli_query($con,"UPDATE `history` SET `score`=$s,`level`=$sn,`right`=$r, da
 } 
 else
 {
-$q=mysqli_query($con,"SELECT * FROM quiz WHERE eid='$eid' " )or die('Error129');
+$q=mysqli_query($con,"SELECT * FROM exam WHERE eid='$eid' " )or die('Error129');
 
 while($row=mysqli_fetch_array($q) )
 {

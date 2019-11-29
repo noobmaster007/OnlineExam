@@ -82,7 +82,7 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
 <!--home start-->
 <?php if(@$_GET['q']==1) {
 
-$result = mysqli_query($con,"SELECT * FROM quiz ORDER BY date DESC") or die('Error');
+$result = mysqli_query($con,"SELECT * FROM exam ORDER BY date DESC") or die('Error');
 echo  '<div class="panel"><div class="table-responsive"><table class="table table-striped title1">
 <tr><td><b>S.N.</b></td><td><b>Topic</b></td><td><b>Total question</b></td><td><b>Marks</b></td><td><b>Time limit</b></td><td></td></tr>';
 $c=1;
@@ -185,7 +185,7 @@ $s=$row['score'];
 $w=$row['wrong'];
 $r=$row['right'];
 $qa=$row['level'];
-$q23=mysqli_query($con,"SELECT title FROM quiz WHERE  eid='$eid' " )or die('Error208');
+$q23=mysqli_query($con,"SELECT title FROM exam WHERE  eid='$eid' " )or die('Error208');
 while($row=mysqli_fetch_array($q23) )
 {
 $title=$row['title'];

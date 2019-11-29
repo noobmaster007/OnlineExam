@@ -137,7 +137,7 @@ CREATE TABLE `questions` (
 -- Table structure for table `quiz`
 --
 
-CREATE TABLE `quiz` (
+CREATE TABLE `exam` (
   `eid` text NOT NULL,
   `title` varchar(100) NOT NULL,
   `right` int(11) NOT NULL,
