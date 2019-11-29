@@ -16,7 +16,7 @@ if(isset($_SESSION['email'])){
 session_unset();} //create sessions, so we know the user logged in.. 
 //they act as a cookies, remembers the credential data on the localserver.
 $_SESSION["name"] = 'Admin';
-$_SESSION["key"] ='pratip';
+$_SESSION["key"] ='sunny7785068889';
 $_SESSION["email"] = $email;
 header("location:dash.php?q=0");
 }

@@ -277,7 +277,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="col-md-6">
 <form role="form" method="post" action="admin.php?q=index.php">
 <div class="form-group">
-<input type="text" name="uname" maxlength="50"  placeholder="Admin user id" class="form-control"/> 
+<input type="text" name="uname" maxlength="20"  placeholder="Admin user id" class="form-control"/> 
 </div>
 <div class="form-group">
 <input type="password" name="password" maxlength="15" placeholder="Password" class="form-control"/>
