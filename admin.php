@@ -1,6 +1,6 @@
 <?php
 include_once 'dbConnection.php';
-$ref=@$_GET['q'];
+$ref=@$_GET['q'];//first value of q=index.php comes from the index page,
 $email = $_POST['uname'];
 $password = $_POST['password'];
 
