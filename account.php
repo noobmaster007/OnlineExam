@@ -34,16 +34,19 @@ include_once 'dbConnection.php';
  include_once 'dbConnection.php';
 session_start();
   if(!(isset($_SESSION['email']))){
-header("location:index.php");
+		header("location:index.php");
 
 }
 else
 {
-$name = $_SESSION['name'];
-$email=$_SESSION['email'];
+	$name = $_SESSION['name'];
+	$email=$_SESSION['email'];
 
 include_once 'dbConnection.php';
-echo '<span class="pull-right top title1" ><span class="log1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,</span> <a href="account.php?q=1" class="log log1">'.$name.'</a>&nbsp;|&nbsp;<a href="logout.php?q=account.php" class="log"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Signout</button></a></span>';
+echo '<span class="pull-right top title1" ><span class="log1">
+<span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,
+</span> <a href="account.php?q=1" class="log log1">'.$name.'</a>&nbsp;|&nbsp;
+<a href="logout.php?q=account.php" class="log"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Signout</button></a></span>';
 }?>
 </div>
 </div></div>
@@ -69,7 +72,9 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
         <li <?php if(@$_GET['q']==1) echo'class="active"'; ?> ><a href="account.php?q=1"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Home<span class="sr-only">(current)</span></a></li>
         <li <?php if(@$_GET['q']==2) echo'class="active"'; ?>><a href="account.php?q=2"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;History</a></li>
 		<li <?php if(@$_GET['q']==3) echo'class="active"'; ?>><a href="account.php?q=3"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;Ranking</a></li>
-		<li class="pull-right"> <a href="logout.php?q=account.php"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Signout</a></li>
+		<li class="pull-right"> <a href="logout.php?q=account.php">
+		<span class="glyphicon glyphicon-log-out" aria-hidden="true">
+		</span>&nbsp;&nbsp;&nbsp;&nbsp;Signout</a></li>
 		</ul>
            
       </div><!-- /.navbar-collapse -->
@@ -84,7 +89,12 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
 
 $result = mysqli_query($con,"SELECT * FROM exam ORDER BY date DESC") or die('Error');
 echo  '<div class="panel"><div class="table-responsive"><table class="table table-striped title1">
-<tr><td><b>S.N.</b></td><td><b>Topic</b></td><td><b>Total question</b></td><td><b>Marks</b></td><td><b>Time limit</b></td><td></td></tr>';
+<tr><td><b>S.N.</b></td>
+<td><b>Topic</b></td>
+<td><b>Total question</b></td>
+<td><b>Marks</b></td>
+<td><b>Time limit</b></td>
+<td></td></tr>';
 $c=1;
 while($row = mysqli_fetch_array($result)) {
 	$title = $row['title'];
