@@ -227,7 +227,7 @@ echo '</table></div></div>';}
 <!--Footer start-->
 <div class="row footer">
 <div class="col-md-3 box">
-<a href="http://www.projectworlds.in/online-examination" target="_blank">About us</a>
+
 </div>
 <div class="col-md-3 box">
 <a href="#" data-toggle="modal" data-target="#login">Admin Login</a></div>
@@ -235,7 +235,7 @@ echo '</table></div></div>';}
 <a href="#" data-toggle="modal" data-target="#developers">Developers</a>
 </div>
 <div class="col-md-3 box">
-<a href="feedback.php" target="_blank">Feedback</a></div></div>
+
 <!-- Modal For Developers-->
 <div class="modal fade title1" id="developers">
   <div class="modal-dialog">
@@ -246,18 +246,71 @@ echo '</table></div></div>';}
       </div>
 	  
       <div class="modal-body">
+      <p>
+		<div class="row">
+		<div class="col-md-4">
+		 <img src="images/Pratip.jpg" width=100 height=100 alt="Pratip Sarkar" class="img-rounded">
+		 </div>
+		 <div class="col-md-5">
+		<a href="https://www.facebook.com/YuoCanCallMeZedi" target="_blank" style="color:#202020; font-family: 'Lato', sans-serif; font-size:18px" title="Find on Facebook">Pratip Sarkar</a>
+		<h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">+91 9614333732</h4>
+		<h4 style="font-family:'typo' ">gablusarkar91@gmail.com</h4>
+		<h4 style="font-family:'typo' ">Siliguri Institute of Technology, Siliguri</h4></div></div>
+		</p>
+      </div>
+
+      <div class="modal-body"> <!--div start-->
         <p>
 		<div class="row">
 		<div class="col-md-4">
-		 <img src="image/CAM00121.jpg" width=100 height=100 alt="Sunny Prakash Tiwari" class="img-rounded">
+		 <img src="images/Sudipta.jpg" width=100 height=100 alt="Sudipta Gupta" class="img-rounded">
 		 </div>
 		 <div class="col-md-5">
-		<a href="http://yugeshverma.blogspot.in" style="color:#202020; font-family:'typo' ; font-size:18px" title="Find on Facebook">Yugesh Verma</a>
-		<h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">+91 9165063741</h4>
-		<h4 style="font-family:'typo' ">vermayugesh323@gmail.com</h4>
-		<h4 style="font-family:'typo' ">Chhattishgarh insitute of management & Technology ,bhilai</h4></div></div>
+		<a href="https://www.linkedin.com/in/sudipta-gupta-03482a17a" target="_blank" style="color:#202020; font-family: 'Lato', sans-serif; font-size:18px" title="Find on LinkedIn">Sudipta Gupta</a>
+		<h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">+91 8145385398</h4>
+		<h4 style="font-family:'typo' ">sudiptagupta14@gmail.com</h4>
+		<h4 style="font-family:'typo' ">Siliguri Institute of Technology, Siliguri</h4></div></div>
 		</p>
-      </div>
+      </div> <!--div end-->
+      <div class="modal-body"> <!--div start-->
+        <p>
+		<div class="row">
+		<div class="col-md-4">
+		 <img src="images/Pranay.jpg" width=100 height=100 alt="Pranay Karmakar" class="img-rounded">
+		 </div>
+		 <div class="col-md-5">
+		<a href="https://www.linkedin.com/in/pranay-karmakar-6b1a82155" target="_blank" style="color:#202020; font-family: 'Lato', sans-serif; font-size:18px" title="Find on LinkedIn">Pranay Karmakar</a>
+		<h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">+91 7602458272</h4>
+		<h4 style="font-family:'typo' ">pranaykarmakar9@gmail.com</h4>
+		<h4 style="font-family:'typo' ">Siliguri Institute of Technology(SIT), Naxalbari</h4></div></div>
+		</p>
+    </div> <!--div end-->
+    <div class="modal-body">  <!--div start--> 
+        <p>
+		<div class="row">
+		<div class="col-md-4">
+		 <img src="images/Bishal.jpeg" width=100 height=100 alt="Bishal Chanda" class="img-rounded">
+		 </div>
+		 <div class="col-md-5">
+		<a href="https://www.linkedin.com/in/bishal-chanda-ba2896194" target="_blank" style="color:#202020; font-family: 'Lato', sans-serif; font-size:18px" title="Find on LinkedIn">Bishal Chanda</a>
+		<h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">+91 8637868184</h4>
+		<h4 style="font-family:'typo' ">bishalchanda2110@gmail.com</h4>
+		<h4 style="font-family:'typo' ">Siliguri Institute of Technology, Siliguri</h4></div></div>
+		</p>
+      </div> <!--div end-->
+      <div class="modal-body"> <!--div start-->
+        <p>
+		<div class="row">
+		<div class="col-md-4">
+		 <img src="images/Sakila.jpg" width=100 height=100 alt="Sakila Sultana" class="img-rounded">
+		 </div>
+		 <div class="col-md-5">
+		<a href="#" style="color:#202020; font-family: 'Lato', sans-serif; font-size:18px" title="Find on Facebook">Sakila Sultana</a>
+		    <h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">+91 7583980837</h4>
+		<h4 style="font-family:'typo' ">email id</h4>
+		 <h4 style="font-family:'typo' ">Siliguri Institute of Technology, Siliguri</h4></div></div>
+		</p>
+      </div> <!--div end-->
     
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
