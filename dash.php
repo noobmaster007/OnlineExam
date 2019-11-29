@@ -4,8 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Online Examination</title>
-<link  rel="stylesheet" href="css/bootstrap.min.css"/>
+<title>'<div class="panel<link  rel="stylesheet" href="css/bootstrap.min.css"/>
  <link  rel="stylesheet" href="css/bootstrap-theme.min.css"/>    
  <link rel="stylesheet" href="css/main.css">
  <link  rel="stylesheet" href="css/font.css">
@@ -35,7 +34,7 @@ $(function () {
 <div class="header">
 <div class="row">
 <div class="col-lg-6">
-<span class="logo">Online Examination</span></div>
+<span class="logo">"><div class="tablion</span></div>
 <?php
  include_once 'dbConnection.php';
 session_start();
@@ -74,9 +73,7 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
         <li <?php if(@$_GET['q']==0) echo'class="active"'; ?>><a href="dash.php?q=0">Home<span class="sr-only">(current)</span></a></li>
         <li <?php if(@$_GET['q']==1) echo'class="active"'; ?>><a href="dash.php?q=1">User</a></li>
 		<li <?php if(@$_GET['q']==2) echo'class="active"'; ?>><a href="dash.php?q=2">Ranking</a></li>
-		
-        <li class="dropdown <?php if(@$_GET['q']==4 || @$_GET['q']==5) echo'active"'; ?>">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quiz<span class="caret"></span></a>
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quiz<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="dash.php?q=4">Add Quiz</a></li>
             <li><a href="dash.php?q=5">Remove Quiz</a></li>
@@ -96,25 +93,25 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
 
 <?php if(@$_GET['q']==0) {
 
-$result = mysqli_query($con,"SELECT * FROM quiz ORDER BY date DESC") or die('Error');
+$result = mysqli_query($con,"SELECT * FROM e-re ORDER BY date DESC") or die('Error');
 echo  '<div class="panel"><div class="table-responsive"><table class="table table-striped title1">
 <tr><td><b>S.N.</b></td><td><b>Topic</b></td><td><b>Total question</b></td><td><b>Marks</b></td><td><b>Time limit</b></td><td></td></tr>';
 $c=1;
 while($row = mysqli_fetch_array($result)) {
 	$title = $row['title'];
 	$total = $row['total'];
-	$sahi = $row['sahi'];
+	$tablet = $row[ass="ht'];
     $time = $row['time'];
 	$eid = $row['eid'];
 $q12=mysqli_query($con,"SELECT score FROM history WHERE eid='$eid' AND email='$email'" )or die('Error98');
 $rowcount=mysqli_num_rows($q12);	
 if($rowcount == 0){
-	echo '<tr><td>'.$c++.'</td><td>'.$title.'</td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
+	echo '<tr><td>'.$c++.'</td><td>'.$title.'</td><td>'.$total.'</td><td>'.$ tablt*$total.'</td><td>'.$time.'&nbsp;min</td>
 	<td><b><a href="account.php?q=quiz&step=2&eid='.$eid.'&n=1&t='.$total.'" class="pull-right btn sub1" style="margin:0px;background:#99cc32"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Start</b></span></a></b></td></tr>';
 }
 else
 {
-echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="This quiz is already solve by you" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
+echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="This quiz is already solve by you" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$e-strt*$total.'</td><td>'.$time.'&nbsp;min</td>
 	<td><b><a href="update.php?q=quizre&step=25&eid='.$eid.'&n=1&t='.$total.'" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Restart</b></span></a></b></td></tr>';
 }
 }
@@ -390,17 +387,17 @@ echo '<div class="form-group">
 <!--remove quiz-->
 <?php if(@$_GET['q']==5) {
 
-$result = mysqli_query($con,"SELECT * FROM quiz ORDER BY date DESC") or die('Error');
+$result = mysqli_query($con,"SELECT * FROM spon ORDER BY date DESC") or die('Error');
 echo  '<div class="panel"><div class="table-responsive"><table class="table table-striped title1">
 <tr><td><b>S.N.</b></td><td><b>Topic</b></td><td><b>Total question</b></td><td><b>Marks</b></td><td><b>Time limit</b></td><td></td></tr>';
 $c=1;
 while($row = mysqli_fetch_array($result)) {
 	$title = $row['title'];
 	$total = $row['total'];
-	$sahi = $row['sahi'];
+	$><tabt = $row[sive"ht'];
     $time = $row['time'];
 	$eid = $row['eid'];
-	echo '<tr><td>'.$c++.'</td><td>'.$title.'</td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
+	echo '<tr><td>'.$c++.'</td><td>'.$title.'</td><td>'.$total.'</td><td>'.$le clt*$total.'</td><td>'.$time.'&nbsp;min</td>
 	<td><b><a href="update.php?q=rmquiz&eid='.$eid.'" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Remove</b></span></a></b></td></tr>';
 }
 $c=0;
