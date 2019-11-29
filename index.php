@@ -93,7 +93,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-12 control-label" for="name"></label>  
   <div class="col-md-12">
-  <input id="name" name="name" placeholder="Enter your name" class="form-control input-md" type="text">
+  <input id="name" name="name" placeholder="Enter your name" class="form-control input-md" type="text" required>
     
   </div>
 </div>
@@ -102,7 +102,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-12 control-label" for="gender"></label>
   <div class="col-md-12">
-    <select id="gender" name="gender" placeholder="Enter your gender" class="form-control input-md" >
+    <select id="gender" name="gender" placeholder="Enter your gender" class="form-control input-md" required>
    <option value="Male">Select Gender</option>
   <option value="M">Male</option>
   <option value="F">Female</option> </select>
@@ -113,7 +113,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-12 control-label" for="name"></label>  
   <div class="col-md-12">
-  <input id="college" name="college" placeholder="Enter your college name" class="form-control input-md" type="text">
+  <input id="college" name="college" placeholder="Enter your college name" class="form-control input-md" type="text" required>
     
   </div>
 </div>
@@ -123,7 +123,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-12 control-label title1" for="email"></label>
   <div class="col-md-12">
-    <input id="email" name="email" placeholder="Enter your email-id" class="form-control input-md" type="email">
+    <input id="email" name="email" onekeyup="check(); return false;" placeholder="Enter your email-id" class="form-control input-md" type="email" required>
     
   </div>
 </div>
@@ -132,7 +132,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-12 control-label" for="mob"></label>  
   <div class="col-md-12">
-  <input id="mob" name="mob" placeholder="Enter your mobile number" class="form-control input-md" type="number">
+  <input id="mob" name="mob" placeholder="Enter your mobile number" class="form-control input-md" type="number" required><span id="message"></span>
     
   </div>
 </div>
@@ -142,7 +142,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-12 control-label" for="password"></label>
   <div class="col-md-12">
-    <input id="password" name="password" placeholder="Enter your password" class="form-control input-md" type="password">
+    <input id="password" name="password" placeholder="Enter your password" class="form-control input-md" type="password" required>
     
   </div>
 </div>
@@ -150,7 +150,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-12control-label" for="cpassword"></label>
   <div class="col-md-12">
-    <input id="cpassword" name="cpassword" placeholder="Conform Password" class="form-control input-md" type="password">
+    <input id="cpassword" name="cpassword" placeholder="Conform Password" class="form-control input-md" type="password" required>
     
   </div>
 </div>
@@ -257,7 +257,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 		 <h4 style="font-family:'typo' ">Siliguri Institute of Technology, Siliguri</h4></div></div>
 		</p>
       </div> <!--div end-->
-      
+
     
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -296,6 +296,24 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 </div><!-- /.modal -->
 <!--footer end-->
 
+<script>
+function check()
+{
 
+    var pass1 = document.getElementById('mob');
+
+
+    var message = document.getElementById('message');
+
+   var goodColor = "#0C6";
+    var badColor = "#FF9B37";
+
+    if(mob.value.length!=10){
+
+        mob.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "required 10 digits, match requested format!"
+    }}
+</script>
 </body>
 </html>
