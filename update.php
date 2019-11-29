@@ -45,13 +45,13 @@ if(@$_GET['q']== 'addquiz' && $_SESSION['key']=='pratip') {
 $name = $_POST['name'];
 $name= ucwords(strtolower($name));
 $total = $_POST['total'];
-$sahi = $_POST['right'];
+$right = $_POST['right'];
 $wrong = $_POST['wrong'];
 $time = $_POST['time'];
 $tag = $_POST['tag'];
 $desc = $_POST['desc'];
 $id=uniqid();
-$q3=mysqli_query($con,"INSERT INTO quiz VALUES  ('$id','$name' , '$sahi' , '$wrong','$total','$time' ,'$desc','$tag', NOW())");
+$q3=mysqli_query($con,"INSERT INTO quiz VALUES  ('$id','$name' , '$right' , '$wrong','$total','$time' ,'$desc','$tag', NOW())");
 
 header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
@@ -125,7 +125,7 @@ if($ans == $ansid)
 $q=mysqli_query($con,"SELECT * FROM quiz WHERE eid='$eid' " );
 while($row=mysqli_fetch_array($q) )
 {
-$sahi=$row['sahi'];
+$right=$row['right'];
 }
 if($sn == 1)
 {
@@ -136,11 +136,11 @@ $q=mysqli_query($con,"SELECT * FROM history WHERE eid='$eid' AND email='$email' 
 while($row=mysqli_fetch_array($q) )
 {
 $s=$row['score'];
-$r=$row['sahi'];
+$r=$row['right'];
 }
 $r++;
-$s=$s+$sahi;
-$q=mysqli_query($con,"UPDATE `history` SET `score`=$s,`level`=$sn,`sahi`=$r, date= NOW()  WHERE  email = '$email' AND eid = '$eid'")or die('Error124');
+$s=$s+$right;
+$q=mysqli_query($con,"UPDATE `history` SET `score`=$s,`level`=$sn,`right`=$r, date= NOW()  WHERE  email = '$email' AND eid = '$eid'")or die('Error124');
 
 } 
 else
