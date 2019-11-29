@@ -302,12 +302,12 @@ echo '</table></div></div>';}
         <p>
 		<div class="row">
 		<div class="col-md-4">
-		 <img src="images/Sakila.jpg" width=100 height=100 alt="Sakila Sultana" class="img-rounded">
+		 <img src="images/Sakila.jpeg" width=100 height=100 alt="Sakila Sultana" class="img-rounded">
 		 </div>
 		 <div class="col-md-5">
 		<a href="#" style="color:#202020; font-family: 'Lato', sans-serif; font-size:18px" title="Find on Facebook">Sakila Sultana</a>
 		    <h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">+91 7583980837</h4>
-		<h4 style="font-family:'typo' ">email id</h4>
+		<h4 style="font-family:'typo' ">sakilasultana25@gmail.com</h4>
 		 <h4 style="font-family:'typo' ">Siliguri Institute of Technology, Siliguri</h4></div></div>
 		</p>
       </div> <!--div end-->
