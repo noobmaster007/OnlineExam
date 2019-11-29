@@ -13,7 +13,8 @@ $count=mysqli_num_rows($result);
 if($count==1){
 session_start();
 if(isset($_SESSION['email'])){
-session_unset();}
+session_unset();} //create sessions, so we know the user logged in.. 
+//they act as a cookies, remembers the credential data on the localserver.
 $_SESSION["name"] = 'Admin';
 $_SESSION["key"] ='sunny7785068889';
 $_SESSION["email"] = $email;
