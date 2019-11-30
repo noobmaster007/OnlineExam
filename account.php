@@ -63,7 +63,7 @@ echo '<span class="pull-right top title1" ><span class="log1">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><b>Netcamp</b></a>
+      <a class="navbar-brand" href="#"><b></b></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

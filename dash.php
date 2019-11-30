@@ -253,7 +253,7 @@ echo '
 <div class="form-group">
   <label class="col-md-12 control-label" for="right"></label>  
   <div class="col-md-12">
-  <input id="right" name="right" placeholder="Enter marks on right answer" class="form-control input-md" min="0" type="number">
+  <input id="right" name="right" placeholder="Enter marks on right answer" class="form-control input-md" min="0" type="number" value="2" readonly="readonly">
     
   </div>
 </div>
@@ -262,7 +262,7 @@ echo '
 <div class="form-group">
   <label class="col-md-12 control-label" for="wrong"></label>  
   <div class="col-md-12">
-  <input id="wrong" name="wrong" placeholder="Enter minus marks on wrong answer without sign" class="form-control input-md" min="0" type="number">
+  <input id="wrong" name="wrong" placeholder="Enter minus marks on wrong answer without sign" class="form-control input-md" min="0" type="number" value="1" readonly="readonly">
     
   </div>
 </div>

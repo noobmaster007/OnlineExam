@@ -1,6 +1,6 @@
 <?php
 include_once 'dbConnection.php';
-ob_start();
+
 $name = $_POST['name'];
 $name= ucwords(strtolower($name));
 $gender = $_POST['gender'];
@@ -37,5 +37,5 @@ else
 {
 header("location:index.php?q7=Email Already Registered!!!");
 }
-ob_end_flush();
+
 ?>
