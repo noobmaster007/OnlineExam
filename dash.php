@@ -251,18 +251,18 @@ echo '
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-12 control-label" for="right"></label>  
+  <label class="col-md-5" for="Marks on right Answer"></label>  
   <div class="col-md-12">
-  <input id="right" name="right" placeholder="Enter marks on right answer" class="form-control input-md" min="0" type="number" value="2" readonly="readonly">
+  <input id="right" name="right" placeholder="Enter marks on right answer" class="form-control input-md" min="0" type="number" value="2">
     
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-12 control-label" for="wrong"></label>  
+  <label class="col-md-6" for="Marks on Wrong Answer W/o Answer"></label>  
   <div class="col-md-12">
-  <input id="wrong" name="wrong" placeholder="Enter minus marks on wrong answer without sign" class="form-control input-md" min="0" type="number" value="1" readonly="readonly">
+  <input id="wrong" name="wrong" placeholder="Enter minus marks on wrong answer without sign" class="form-control input-md" min="0" type="number" value="1">
     
   </div>
 </div>
